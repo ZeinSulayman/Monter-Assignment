@@ -1,0 +1,78 @@
+/* ReportsTable.module.css */
+
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    background: #d4d3cf;
+    height: 100vh;
+    width: 100vw;
+}
+
+.reportsContainer {
+    background: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow:2px 3px 5px #8c8a80;
+    border-radius: 10px;
+    width: 800px;
+}
+
+.title {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.71);
+}
+
+.reportsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+
+}
+
+.reportsTable td {
+    text-align: left;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+.reportsTable th {
+    text-align: left;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    color: #5c5b55;
+}
+
+.dateTime {
+    display: flex;
+    padding-top: 15px;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.date {
+
+}
+
+.time {
+    font-size: 10px;
+    color: #5c5b55;
+
+}
+
+.downloadButton {
+    border: none;
+    padding-left: 20px;
+    background: white;
+    cursor: pointer;
+}
+
+.downloadIcon {
+    height: 30px;
+    width: 35px;
+}
