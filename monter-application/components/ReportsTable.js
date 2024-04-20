@@ -12,7 +12,11 @@ const ReportsTable = ({ reports }) => {
   return (
       <div className={styles.pageContainer}>
         <div className={styles.reportsContainer}>
-          <div className={styles.title}>Recently Generated Reports</div>
+          <div className={styles.titleContainer}>
+            <div className={styles.title}>Recently Generated Reports</div>
+            <img src={"/filter-icon.png"} alt={"Filter Icon"} className={styles.filterIcon}></img>
+            <img src={"/close-icon.png"} alt={"Close Icon"} className={styles.closeIcon}></img>
+          </div>
           <table className={styles.reportsTable}>
             <thead>
               <tr className={styles.tableHeader}>

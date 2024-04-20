@@ -17,12 +17,29 @@
     width: 800px;
 }
 
+.titleContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .title {
     font-size: 18px;
     text-align: center;
-    padding: 20px;
+    padding: 25px 123px 20px 20px;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.71);
+}
+
+.filterIcon {
+    padding: 20px 7px 20px 20px;
+    width: 35px;
+    height: 35px;
+}
+
+.closeIcon {
+    padding: 20px 37px 20px 7px;
+    width: 35px;
+    height: 35px;
 }
 
 .reportsTable {
@@ -45,7 +62,7 @@
     padding: 10px 20px;
     font-size: 14px;
     background-color: #f2f2f2;
-    color: #5c5b55;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .dateTime {
