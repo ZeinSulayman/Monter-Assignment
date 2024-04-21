@@ -1,0 +1,60 @@
+/* Paginator css */
+
+.paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.24);
+  align-self: flex-end;
+}
+
+.paginatorPageNumber {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #ff2f00;
+  border-radius: 10px;
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+  height: 30px;
+}
+
+.paginator button:disabled {
+  cursor: not-allowed;
+}
+
+.paginator button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.paginatorPrevious {
+  border: none;
+  background: none;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4);
+  height: 30px;
+  border-radius: 10px;
+}
+
+.paginatorNext {
+  border: none;
+  background: none;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4);
+  height: 30px;
+  border-radius: 10px;
+}
+
+.paginatorRowSelection {
+  padding-left: 40px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.paginatorRowSelectionBox {
+  margin-left: 5px;
+  padding: 5px 10px 5px 5px;
+}

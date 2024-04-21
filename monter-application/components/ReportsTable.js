@@ -1,8 +1,20 @@
 'use client';
-import React from 'react';
+import React, {useState} from 'react';
+import Paginator from "../components/Paginator";
 import styles from './ReportsTable.module.css';
 
 const ReportsTable = ({ reports }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [reportsPerPage, setReportsPerPage] = useState(10);
+
+  const totalPages = Math.ceil(reports.length / reportsPerPage);
+
+  const startIndex = (currentPage - 1) * reportsPerPage;
+  const currentReports = reports.slice(startIndex, startIndex + reportsPerPage);
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
   // Function to handle file download
   const handleDownload = (fileName) => {
     // Implement file download logic here
@@ -26,7 +38,7 @@ const ReportsTable = ({ reports }) => {
               </tr>
             </thead>
             <tbody>
-              {reports.map((report, index) => (
+              {currentReports.map((report, index) => (
                 <tr key={index}>
                   <td>
                     <div className={styles.dateTime}>
@@ -44,13 +56,19 @@ const ReportsTable = ({ reports }) => {
                       <img className={styles.downloadIcon} src={"/download-icon.png"} alt={report.fileName}>
                       </img>
                     </button>
-
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-          {/* Pagination component will go here */}
+          <Paginator
+              currentPage={currentPage}
+              onPageChange={handlePageChange}
+              totalPages={totalPages}
+              reportsPerPage={reportsPerPage}
+              setReportsPerPage={setReportsPerPage}
+          >
+          </Paginator>
         </div>
       </div>
   );

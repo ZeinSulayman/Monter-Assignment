@@ -3,6 +3,7 @@
 .pageContainer {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     background: #d4d3cf;
     height: 100vh;
     width: 100vw;
@@ -43,8 +44,9 @@
 }
 
 .reportsTable {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 .tableHeader {
